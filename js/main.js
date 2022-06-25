@@ -8,4 +8,6 @@ const createPhotos = (count) => {
   return photos;
 };
 
-createPhotos(MAX_PHOTO_COUNT);
+(createPhotos(MAX_PHOTO_COUNT));
+
+
