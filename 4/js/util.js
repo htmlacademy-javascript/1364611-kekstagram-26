@@ -1,7 +1,8 @@
 //Функция для проверки максимальной длины строки
-function commentLengthCheck (stringComment, maxLength){
-  return stringComment.length <= maxLength;
-}
+// function commentLengthCheck (stringComment, maxLength){
+//   return stringComment.length <= maxLength;
+// }
+
 //Функция возвращающая случайное целое число из указанного диапазона
 function getRandomPositiveInteger (a, b) {
   const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
@@ -11,5 +12,5 @@ function getRandomPositiveInteger (a, b) {
 }
 //Функция возвращающая случайный элемент массива
 const getRandomArrayElement = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
-commentLengthCheck();
+
 export {getRandomPositiveInteger, getRandomArrayElement};
