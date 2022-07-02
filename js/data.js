@@ -52,6 +52,16 @@ function makePhoto(arg) {
   });
 }
 
-export {makePhoto, MAX_PHOTO_COUNT};
+const createPhotos = (count) => {
+  const photos = [];
+  for (let i = 1; i <= count; i++) {
+    photos.push(makePhoto(i));
+  }
+  return photos;
+};
+
+const photoCards = createPhotos(MAX_PHOTO_COUNT);
+
+export {photoCards};
 
 

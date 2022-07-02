@@ -1,13 +1,15 @@
-import {makePhoto, MAX_PHOTO_COUNT} from './data.js';
+import {photoCards} from './data.js';
 
-const createPhotos = (count) => {
-  const photos = [];
-  for (let i = 1; i <= count; i++) {
-    photos.push(makePhoto(i));
-  }
-  return photos;
-};
+const picturesListFragment = document.createDocumentFragment();
+const picturesContainer = document.querySelector('.pictures');
+const elementTemplate = document.querySelector('#picture')
+  .content
+  .querySelector('a');
 
-(createPhotos(MAX_PHOTO_COUNT));
-
-
+photoCards.forEach((photo) => {
+  const element = elementTemplate.cloneNode(true);
+  element.querySelector('.picture__likes').textContent=photo.likes;
+  element.querySelector('.picture__comments').textContent=[photo.comments].length;
+  picturesListFragment.appendChild(element);
+});
+picturesContainer.appendChild(picturesListFragment);
